@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1481803120 source:c:\dokumentumok\programok\c++\képszerkesztõ\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	<ctime>
+	<cmath>
+

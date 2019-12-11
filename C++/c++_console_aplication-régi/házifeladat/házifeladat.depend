@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1509212940 source:c:\dokumentumok\programok\c++\házifeladat\main.cpp
+	"skiplist.hpp"
+	<string>
+	<iostream>
+	<set>
+	<cstdlib>
+	<ctime>
+	<functional>
+	<chrono>
+
+1509279899 c:\dokumentumok\programok\c++\házifeladat\skiplist.hpp
+	<vector>
+	<random>
+	<ctime>
+	<iostream>
+

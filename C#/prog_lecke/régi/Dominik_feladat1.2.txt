@@ -1,0 +1,33 @@
+0.Hozz létre egy új consol application-t könyvtar névvel.
+1. Hozz létre egy osztályt (class) "Book" néven. 
+- egy könyvnek lehet írója 
+- megjelenési ideje (Legyen string "2019.01.01" de ha tudod megcsinálhatod randommal is)
+- Címe
+- mûfaja
+- ára
+- legyen egy listája arrol hogy ki kölcsönözte eddig ki(ajánlom a string list et de megoldhatod máshogy is.)
+
+2. Legyen 2 konstruktorja
+  -a. (cím,író,megjelenés,mûfaj,ár) 
+  -b. (Cím,író,mûfaj,ár)
+
+3. Írd felül a toString() fügvényt
+-paraméter nincs és egy string-el tér vissza.
+-tartalmazza az író nevét és a könyv címét és a végén az árát.
+
+4.írj get fügvényt az árra.
+5.Minden könyvet ki lehet kölcsönözni és ha kikölcsönözték akkor a kölcsönzõ neve felkerül a listára, egy könvet kétszer ugyan az a személy nem kölcsönözhet (bruh).
+-legyen egy olyan fv is ahol lekérdezzük h eddig ki kölcsönözte ki a könyvet.
+
+6. The MAIN.
+-próbáld ki az összes fügvényt és írj rá egy-egy példát.
+-Tisztelt "Szófosó János" 123 részes kalanddrámaromantikakrimit- írt "Autók és nõk és gyilkosságok az X.rész" címen 
+(az x az éppen aktuális részt jelöli) és neked kell bevinni mind az adatbázisba, ami egy általad választott tároló jelöl. 
+-a számadatok (lehetõleg értelmes) random számok legyenek, ha nem tudod hogy kell nézz utánna a "Random" osztálnak.
+-Lehetõleg a b-tipusú konstruktort használd ehez a feladathoz.
+
+-Erika nagy rajongója a könyveknek már elolvasta az elsõ 3 részt és meg akarja venni az összes többi részt. Mennyibe fog ez neki fájni?
+
+-Látván a horribilis összegeket inkább csak kikölcsönzi mindet.
+
+7.Mindent logolj a consolra pls. 

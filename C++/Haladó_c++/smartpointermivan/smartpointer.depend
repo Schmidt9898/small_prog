@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1570131346 source:c:\lacika\programok\haladó_c++\smartpointer\main.cpp
+	<iostream>
+	<memory>
+	"smart_pointer.h"
+
+1570131119 c:\lacika\programok\haladó_c++\smartpointer\smart_pointer.h
+

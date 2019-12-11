@@ -351,3 +351,28 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+*.config
+*.csproj
+*.resx
+*.html
+*.md
+*.zip
+*.pdom
+C++/c++_Adatszerk/beadottak/hf03/RemoteSystemsTempFiles/.project
+C++/c++_Adatszerk/beadottak/hf04/.metadata/.lock
+C++/c++_Adatszerk/
+
+*.layout
+C++/c++_grafika-régi/
+C++/libs/
+*.metadata/
+*.recommenders/
+*.svn/
+*.idea/
+mobil/
+nyelvtech/
+*.plang
+plangházi-régi/
+Win-scripts/
+*.iml
+*.ini

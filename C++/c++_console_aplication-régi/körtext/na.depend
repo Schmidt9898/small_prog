@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1477043515 source:c:\dokumentumok\programok\c++\na\main.cpp
+	<iostream>
+	<fstream>
+	<cmath>
+

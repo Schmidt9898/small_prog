@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "consoletcpwriter", "consoletcpwriter\consoletcpwriter.csproj", "{4A52C486-349D-466A-A058-8CDCF38E0CEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A52C486-349D-466A-A058-8CDCF38E0CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A52C486-349D-466A-A058-8CDCF38E0CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A52C486-349D-466A-A058-8CDCF38E0CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A52C486-349D-466A-A058-8CDCF38E0CEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12752BE6-8B14-44A4-9B35-9BDEF080955E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,10 @@
+0,Somogyi Oldamur,8878,Lovászi
+1,Kelemen Fedóra,7727,Palotabozsok
+1,Török Lizandra,3735,Kánó
+0,Szőke Timoti,4066,Tiszacsege
+0,Rácz Arétász,2884,Bakonyszombathely
+1,Pál Amina,7825,Old
+0,Vörös Ézsaiás,8146,Jenő
+1,Gáspár Lorenza,8957,Csömödér
+0,Szabó Ramiró,7165,Mórágy
+1,Szőke Romina,3462,Borsodivánka

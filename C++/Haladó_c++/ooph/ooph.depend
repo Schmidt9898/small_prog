@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1570450834 source:c:\lacika\programok\haladó_c++\ooph\main.cpp
+	<iostream>
+	"A.h"
+
+1570451615 c:\lacika\programok\haladó_c++\ooph\a.h
+	<string>
+	"pres_F.h"
+
+1570450804 c:\lacika\programok\haladó_c++\ooph\pres_f.h
+	"A.h"
+	<vector>
+

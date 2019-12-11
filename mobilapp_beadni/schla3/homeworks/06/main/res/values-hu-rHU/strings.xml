@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">madbházi</string>
+
+    <string name="equal">egyenlő</string>
+    <string name="multiplied">szorozva</string>
+    <string name="table">Szorzótábla</string>
+    <string name="change">Másik nyelv</string>
+    <string name="This">Nem más mint</string>
+</resources>

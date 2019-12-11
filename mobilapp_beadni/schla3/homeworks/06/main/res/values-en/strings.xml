@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">madbhomework</string>
+
+
+    <string name="equal">equal</string>
+    <string name="multiplied">multiplied by</string>
+    <string name="table">Multiplication table</string>
+    <string name="change">change language</string>
+    <string name="This">It is</string>
+</resources>

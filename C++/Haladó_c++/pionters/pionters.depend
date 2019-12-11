@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1574686004 source:c:\lacika\programok\haladó_c++\pionters\main.cpp
+	<iostream>
+	<memory>
+

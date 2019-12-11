@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
+	x:Class="tcpipkapcsolat.Window1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="tcpipkapcsolat"
+	x:Name="window1"
+	Width="396"
+	Height="459">
+	<Grid>
+		<TextBox
+			Width="348"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			x:Name="textablak"
+			TextWrapping="Wrap"
+			IsReadOnly="True"
+			VerticalScrollBarVisibility="Auto"
+			HorizontalScrollBarVisibility="Disabled"
+			VerticalContentAlignment="Top"
+			BorderBrush="Black"
+			Height="231"
+			Margin="20,50,0,80"
+			VerticalAlignment="Bottom" />
+		<Button
+			Width="75"
+			Height="23"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="293,0,0,28"
+			Content="send"
+			x:Name="sender"
+			Click="sender_Click" />
+		<Button
+			Width="75"
+			Height="23"
+			x:Name="listen"
+			Content="listen"
+			Click="listen_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="210,0,0,326" />
+		<Button
+			Height="23"
+			x:Name="connect"
+			Content="connect"
+			Click="connect_Click"
+			Grid.Column="0"
+			Grid.Row="0"
+			VerticalAlignment="Bottom"
+			Width="75"
+			HorizontalAlignment="Right"
+			Margin="0,0,22,326" />
+		<TextBox
+			Width="232"
+			Height="43"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="40,0,0,28"
+			x:Name="textline"
+			TextWrapping="Wrap"
+			Text=""
+			KeyUp="textline_KeyUp" />
+		<TextBox
+			x:Name="nev"
+			TextWrapping="Wrap"
+			Text=""
+			Width="178"
+			Height="33"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="16,0,0,326"
+			TextChanged="nev_TextChanged" />
+		<Label
+			Width="56"
+			Height="26"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="0,31,0,0"
+			Content="Címem:" />
+		<Label
+			Content="Cél:"
+			Height="26"
+			Width="35"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="195,31,0,0" />
+		<TextBox
+			Width="120"
+			Height="20"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top"
+			Margin="0,34,211,0"
+			Text=""
+			x:Name="sorce"
+			TextChanged="sorce_TextChanged" />
+		<TextBox
+			Width="120"
+			Height="20"
+			Text=""
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top"
+			Margin="0,34,37,0"
+			x:Name="cel"
+			TextChanged="cel_TextChanged" />
+		<Label
+			Width="25.5"
+			Height="26"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="187,0,0,393"
+			x:Name="szal"
+			Content="" />
+	</Grid>
+</Window>

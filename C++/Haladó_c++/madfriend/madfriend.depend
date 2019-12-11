@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1569757557 source:c:\lacika\programok\haladó_c++\madfriend\main.cpp
+	<iostream>
+	"improperfriend.cpp"
+	"King.hpp"
+
+1569674196 source:c:\lacika\programok\haladó_c++\madfriend\improperfriend.cpp
+
+1569671585 source:c:\lacika\programok\haladó_c++\madfriend\properfriend.cpp
+
+1569674196 c:\lacika\programok\haladó_c++\madfriend\improperfriend.cpp
+
+1569757201 c:\lacika\programok\haladó_c++\madfriend\king.hpp
+	"pesant.hpp"
+
+1569757637 c:\lacika\programok\haladó_c++\madfriend\pesant.hpp
+	"king.hpp"
+
