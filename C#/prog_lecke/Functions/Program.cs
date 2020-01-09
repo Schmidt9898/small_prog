@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Functions
 {
@@ -10,45 +11,66 @@ namespace Functions
     {
         static void Main(string[] args)
         {
-            {/*
-                Console.WriteLine("Functions...");
+            /*
+            Functions fv = new Functions();
+            
 
-                Say();
 
-                Action F = () => { Console.WriteLine("asd"); };
+           var watch = System.Diagnostics.Stopwatch.StartNew();
+            // Thread.Sleep(1000);
 
-                List<elem> lista = new List<elem>();
+            ulong [] primek = fv.primszam(10000);
 
-            lista.Sort(delegate (elem elem1, elem elem2) { return elem1.a.CompareTo(elem2.a); });
 
-                F();*/
+
+            watch.Stop();
+            
+            Console.WriteLine("idő miliszekundban: "+watch.ElapsedMilliseconds);
+            Console.WriteLine("idő tickben: "+watch.ElapsedTicks);
+            */
+            /* foreach (int i in primek)
+             {
+                 Console.WriteLine(i);
+             }
+             */
+
+            /*
+
+
+            Cint a = new Cint(5);
+            Cint b = new Cint(5, 2);
+
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(a+b);
+            Console.WriteLine(a*b);
+            b = new Cint(0, 1);
+            a = b * b;
+            Console.WriteLine(a);
+            Console.WriteLine(a*b);
+
+
+    */
+
+            Kordi_kezelo k = new Kordi_kezelo();
+              k.kordi_rng(1000,1000,5000000,"file2.txt");
+            XY[] tomb = k.kordi_olvas("file1.txt");
+            foreach(XY i in tomb)
+            {
+                Console.WriteLine(i.ToString());
             }
 
-
-            Console.WriteLine("helo");
-            Functions funcszionsz = new Functions();
-            Random rng = new Random();
-            int a = rng.Next(10);
-            int b = rng.Next(10);
-            double r = 5;
-            Console.WriteLine( funcszionsz.körker(r) );
-
-
-            Console.WriteLine(funcszionsz.negyker(a, b));
-            int ar = 1000;
-
-            Action Say = () => { Console.WriteLine("saasdasda sd asd awfjnjjkhakhjn lkmklagh "); };
-            
-            Console.WriteLine(funcszionsz.lear(ar,30,Say));
-            /*Console.WriteLine(funcszionsz.lear(ar, 50));
-            Console.WriteLine(funcszionsz.lear(ar, 0));
-            Console.WriteLine(funcszionsz.lear(ar, -10));
-            Console.WriteLine(funcszionsz.lear(ar, 100));
-            Console.WriteLine(funcszionsz.lear(ar, 1200));
+            /*
+            pontok r = new pontok();
+            pont[] point = r.asd("file.txt");
+            pont origo = new pont(0, 0);
+            float s = origo.tavolsag(point[0]);
+            Console.WriteLine(s);
+            foreach(pont i in point)
+            {
+                Console.WriteLine(origo.tavolsag(i));
+            }
             */
-            
-
-            
 
 
 
@@ -56,9 +78,9 @@ namespace Functions
 
 
 
-
-            Console.ReadKey();
-        }
+                Console.ReadKey();
+        }  
+        
 
     }
     
