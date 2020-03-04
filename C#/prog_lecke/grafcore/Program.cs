@@ -23,10 +23,10 @@ namespace grafcore
             renderer = SDL.SDL_CreateRenderer(window, -1, SDL.SDL_RendererFlags.SDL_RENDERER_PRESENTVSYNC);
 
             SDL.SDL_Event e;
-            
+           /* 
             Stopwatch timer = new Stopwatch();
             timer.Start();
-            
+            */
             Stopwatch drawtick = new Stopwatch();
             drawtick.Start();
 
@@ -35,7 +35,9 @@ namespace grafcore
             long counter = 0;
 
             int delay = 20;
-            double timespeed = 4;
+            double divine = 1000.0 / (double)delay;
+           // int timepast=0;
+            int pixelp = 1000;
 
 
             Circle kor = new Circle(20, 20, 20);
@@ -56,11 +58,11 @@ namespace grafcore
                     }
                     if(e.type== SDL.SDL_EventType.SDL_MOUSEBUTTONDOWN)
                     {
-                        timespeed = 0.5;
+                        pixelp = 10;
                     }
                     if (e.type == SDL.SDL_EventType.SDL_MOUSEBUTTONUP)
                     {
-                        timespeed = 4;
+                        pixelp = 1000;
                     }
 
                 }
@@ -81,13 +83,11 @@ namespace grafcore
                    // Console.WriteLine(counter);
                     counter = 0;
 
+                    
+                    kor.Move(xe, ye,divine,pixelp);
 
 
                     drawtick.Restart();
-                }else if(timer.ElapsedMilliseconds>(delay/timespeed))
-                {
-                    kor.Move(xe, ye);
-                    timer.Restart();
                 }
                 else
                 {
@@ -95,7 +95,7 @@ namespace grafcore
 
                    // counter++;
 
-                    int timeslep =  (int) (delay / timespeed) - (int) timer.ElapsedMilliseconds;
+                    int timeslep =  (int) (delay) - (int) drawtick.ElapsedMilliseconds;
                     if(timeslep>0)
                     Thread.Sleep(timeslep);
                 }

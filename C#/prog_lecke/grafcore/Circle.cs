@@ -17,12 +17,12 @@ namespace grafcore
             this.r = y;
         }
 
-        public void Move(int Tx, int Ty)
+        public void Move(int Tx, int Ty,double time_past,int pixel)
         {
             
             double vx = Tx - x;
             double vy = Ty - y;
-            double s = Math.Sqrt(vx*vx+vy*vy)/2;
+            double s = Math.Sqrt(vx*vx+vy*vy)*time_past/pixel;
             x += vx / s ;
             y += vy / s ;
         }
