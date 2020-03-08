@@ -1,8 +1,8 @@
 #include "game.h"
 
 //globals
-
 double lastframe,currentframe,DELTA;
+glm::vec2 player_direction;
 
 Game::Game(){
 // glfw: initialize and configure
@@ -63,6 +63,8 @@ void Game::loop()
 
 int Game::playsceen(){
 std::cout<<"gamesceen\n";
+player = new Rectangle(-0.5,0,0.1,0.1,rect);
+//player_direction = glm::vec2(0.0,0.0);
 Rectangle fal(0,0,1,0.1,rect);
 while (!glfwWindowShouldClose(window)) {
         CalculateDelta();
@@ -70,50 +72,30 @@ while (!glfwWindowShouldClose(window)) {
         glClearColor(0, 0, 0, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        // draw our first triangle
-        //glUseProgram(shaderProgram);
-//        ourshader.use();
-  //      glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
-  /*      double t=glfwGetTime();
-        double r = (sin(t) /2.0 + 0.5);
-        double g = (sin(t/2) /2.0 + 0.5);
-        double b = (sin(t/4) /2.0 + 0.5);*/
-    //    ourshader.setVec3("unicolor",r,g,b);
-       // glUniform4f(unicolorlocation,r,g,b,1);
+        CalculatePlayerMove();
 
+        std::cout<<fal.is_colide_with(player);
+        if(fal.is_colide_with(player))
+            player->pos=player->laststep;
 
+        player->Draw();
 
-          glm::mat4 trans = glm::mat4(1.0f);
-
-        trans = glm::translate(trans,glm::vec3(0.5,0,0.0));
-        trans = glm::rotate(trans,(float)glfwGetTime(),glm::vec3(0,0,1));
-        trans = glm::scale(trans,glm::vec3(0.1,0.1,0.0));
-        //trans = glm::rotate(trans,(float)glfwGetTime(),glm::vec3(0,0,1));
         fal.Draw();
 
-        trans = glm::mat4(1.0f);
-        trans = glm::translate(trans,glm::vec3(-0.5,0.0,0.0));
-        trans = glm::rotate(trans,(float)glfwGetTime(),glm::vec3(0,0,1));
-        trans = glm::scale(trans,glm::vec3(0.1,0.1,0.0));
-        //pen2.Draw(trans,glm::vec3(r,g,b));
 
 
         glfwSwapBuffers(window);
         glfwPollEvents();
-        std::this_thread::sleep_for(std::chrono::milliseconds(20));
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
     return -1;
-
-
 }
-
 
 int Game::menusceen()
 {
     std::cout<<"menusceen\n";
     return 2;
 };
-
 
 void Game::CalculateDelta()
 {
@@ -122,7 +104,14 @@ void Game::CalculateDelta()
     lastframe = currentframe;
 }
 
+void Game::CalculatePlayerMove(){
 
+    glm::vec2 norm = glm::normalize(player_direction);
+    if(norm!=norm)
+        norm=glm::vec2(0.0,0.0);
+    player->laststep=player->pos;
+    player->pos+= glm::vec2(norm.x*DELTA,norm.y*DELTA);
+}
 
 
 
@@ -161,27 +150,21 @@ void Game::framebuffer_size_callback(GLFWwindow* window, int width, int height) 
 void Game::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
+     //zeroing direction
+     player_direction = glm::vec2(0.0,0.0);
+    //geting direction
 
-    if(glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS) {
-
+    if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS ) {
+        player_direction = player_direction+glm::vec2(0,1);
     }
-    if(glfwGetKey(window, GLFW_KEY_G) == GLFW_PRESS) {
-
+    if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
+        player_direction = player_direction+glm::vec2(-1,0);
     }
-    if(glfwGetKey(window, GLFW_KEY_B) == GLFW_PRESS) {
-
+    if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
+        player_direction = player_direction+glm::vec2(0,-1);
     }
-     if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
-
-    }
-     if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
-
-    }
-     if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
-
-    }
-     if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
-
+    if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
+        player_direction = player_direction+glm::vec2(1,0);
     }
 }
 

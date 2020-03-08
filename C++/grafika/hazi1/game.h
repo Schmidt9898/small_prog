@@ -35,7 +35,7 @@ Pen* rect;
 //float x=0,y=0;
 
 //entities
-
+Rectangle* player;
 
 
 void PEN_Init()
@@ -58,7 +58,7 @@ int playsceen();
 //delta
 void CalculateDelta();
 //player movement
-
+void CalculatePlayerMove();
 
 public:
 Game();//init
