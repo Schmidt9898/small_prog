@@ -2644,7 +2644,7 @@
 1578255577 d:\programozas\small_prog\c++\grafika\hazi1\include\glm\gtc\type_ptr.inl
 	<cstring>
 
-1583685123 d:\programozas\small_prog\c++\grafika\hazi1\drawable.h
+1583708069 d:\programozas\small_prog\c++\grafika\hazi1\drawable.h
 	<glm/glm.hpp>
 	<glm/gtc/matrix_transform.hpp>
 	<glm/gtc/type_ptr.hpp>
@@ -2671,6 +2671,6 @@
 	<glm/gtc/type_ptr.hpp>
 	"Drawable.h"
 
-1583685887 source:d:\programozas\small_prog\c++\grafika\hazi1\game.cpp
+1583707716 source:d:\programozas\small_prog\c++\grafika\hazi1\game.cpp
 	"game.h"
 

@@ -65,7 +65,7 @@ int Game::playsceen(){
 std::cout<<"gamesceen\n";
 player = new Rectangle(-0.5,0,0.1,0.1,rect);
 //player_direction = glm::vec2(0.0,0.0);
-Rectangle fal(0,0,1,0.1,rect);
+Rectangle fal(-0.2,0,0.7,0.1,rect);
 while (!glfwWindowShouldClose(window)) {
         CalculateDelta();
 
@@ -74,9 +74,10 @@ while (!glfwWindowShouldClose(window)) {
 
         CalculatePlayerMove();
 
-        std::cout<<fal.is_colide_with(player);
-        if(fal.is_colide_with(player))
-            player->pos=player->laststep;
+        //std::cout<<fal.is_colide_with(player);
+        if(player->is_colide_with(&fal))
+            player->pos=player->box_colider(&fal);
+        std::cout<<player->pos.x<<" x:pppp:y "<<player->pos.y<<"\n";
 
         player->Draw();
 
@@ -86,7 +87,7 @@ while (!glfwWindowShouldClose(window)) {
 
         glfwSwapBuffers(window);
         glfwPollEvents();
-        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        std::this_thread::sleep_for(std::chrono::milliseconds(20));
     }
     return -1;
 }
@@ -110,7 +111,9 @@ void Game::CalculatePlayerMove(){
     if(norm!=norm)
         norm=glm::vec2(0.0,0.0);
     player->laststep=player->pos;
+    if(DELTA<0.1)
     player->pos+= glm::vec2(norm.x*DELTA,norm.y*DELTA);
+    //std::cout<<DELTA<<"\n";
 }
 
 

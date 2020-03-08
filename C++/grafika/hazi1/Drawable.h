@@ -44,6 +44,24 @@ public:
 
     return colide_x && colide_y;
     }
+     virtual glm::vec2 box_colider(Drawable *obj) //only if coliding, only if it's a box
+    {
+        glm::vec2 corr_vector=pos;
+        if((laststep.x+scale.x) <= obj->pos.x)
+        corr_vector.x= obj->pos.x-scale.x;
+        if(laststep.x>=(obj->pos.x+obj->scale.x))
+        corr_vector.x=obj->pos.x+obj->scale.x;
+
+        if((laststep.y+scale.y) <= obj->pos.y)
+        corr_vector.y = (obj->pos.y-0.1);
+        if(laststep.y>=(obj->pos.y+obj->scale.y))
+        corr_vector.y=obj->pos.y+obj->scale.y;
+
+
+        std::cout<<corr_vector.x<<" x:y "<<corr_vector.y<<"\n";
+
+    return corr_vector;
+    }
 
 };
 
