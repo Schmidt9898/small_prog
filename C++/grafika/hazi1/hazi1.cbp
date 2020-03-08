@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="grafikagyak4" />
+		<Option title="hazi1" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -41,7 +41,9 @@
 			<Add directory="lib-mingw" />
 		</Linker>
 		<Unit filename="Drawable.h" />
+		<Unit filename="Pen.h" />
 		<Unit filename="Vertices.h" />
+		<Unit filename="game.h" />
 		<Unit filename="glad.c">
 			<Option compilerVar="CC" />
 		</Unit>

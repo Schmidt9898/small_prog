@@ -1,112 +1,69 @@
 #ifndef DRAWABLE_H_INCLUDED
 #define DRAWABLE_H_INCLUDED
-#include "Vertices.h"
-#include "shader.h"
-#include "global_VAOS.h"
-#include <string>
+
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
+#include "Pen.h"
+
 using namespace std;
+//PenFactory _penfactory;
+
+
+
+//struct p16fgu {p16fgu(){PEN_Init();};};p16fgu _p16fgu;
+
 class Drawable
 {
-
-    //VerticeObject *ver=nullptr;
-    //Shader *shader=nullptr;
-
-    float x,y;
-    float scale;
-    float rotation;
-    unsigned int *VAO; ///verticesbuff, Verticesarray, elementbuffer
+    protected:
+    Pen *mypen=nullptr;
+    glm::vec2 laststep = glm::vec2(0.0,0.0);
+    glm::vec2 pos = glm::vec2(0.0f,0.0f);
+    glm::vec2 scale = glm::vec2(0.0,0.0);
+    float rotation=0;
 
 public:
-    virtual ~Drawable() {
-      //  glDeleteVertexArrays(1,&VAO);
-      //  glDeleteBuffers(1,&VBO);
-      //  glDeleteBuffers(1,&EBO);
-      //  delete shader;
-    };
-
-
-    Drawable(string vertexfile,string fragmentfile,string verfile,string indfile)
+    virtual ~Drawable() {};
+    Drawable(Pen * p):mypen(p){};
+    virtual void Draw()
     {
-       /* shader = new Shader(vertexfile.c_str(),fragmentfile.c_str());
-        if(!ver.LoadVerInd(verfile,indfile))
-            cerr<<"baj van\n";
-        setupbufferselement();*/
+        glm::mat4 trans = glm::mat4(1.0f);
+        trans = glm::translate(trans,glm::vec3(pos,0.0));
+        trans = glm::rotate(trans,rotation,glm::vec3(0,0,1));
+        trans = glm::scale(trans,glm::vec3(scale,0.0));
+        mypen->Draw(trans,glm::vec3(1,1,1));
     }
-    Drawable(string vertexfile,string fragmentfile,string verfile)
+    virtual void is_colide_with(Drawable obj)
     {
-       /* shader = new Shader(vertexfile.c_str(),fragmentfile.c_str());
-        if(!ver.LoadVerticies(verfile))
-            cerr<<"baj van\n";
-        setupbuffers();*/
-    }
-
-    void Draw()
-    {
-       // shader->use();
-       // glBindVertexArray(VAO);
-
-        ///TODO transform
-        ///
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+//        bool colide_x = pos
 
     }
 
-/*
-private:
-    void setupbuffers()
+};
+
+class Rectangle : public Drawable
+{
+    public:
+        Rectangle(float x,float y,float w,float h,Pen* p):Drawable(p){
+        pos = glm::vec2(x,y);
+        scale = glm::vec2(w,h);
+        };
+       /* void Draw()
     {
-        glGenVertexArrays(1, &VAO);
-        glGenBuffers(1, &VBO);
-
-        // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
-        glBindVertexArray(VAO);
-
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
-        //glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-        glBufferData(GL_ARRAY_BUFFER, ver.getsize(), ver.getvertices(), GL_STATIC_DRAW);
-
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-        glEnableVertexAttribArray(0);
-        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)(3*sizeof(float)));
-        glEnableVertexAttribArray(1);
-
-        // note that this is allowed, the call to glVertexAttribPointer registered VBO as the vertex attribute's bound vertex buffer object so afterwards we can safely unbind
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-
-        // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
-        // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
-        glBindVertexArray(0);
-
-    }
-    void setupbufferselement()
-    {
-        glGenVertexArrays(1,&VAO);
-        glGenBuffers(1,&EBO);
-        glGenBuffers(1,&VBO);///létrehoz
-        glBindVertexArray(VAO);
-        glBindBuffer(GL_ARRAY_BUFFER,VBO);///összeköt? csak 1 lehet egyszerre
-
-        glBufferData(GL_ARRAY_BUFFER,ver.getsize(),ver.getvertices(),GL_STATIC_DRAW);///átmásol elküld
-
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,EBO);///összeköt? csak 1 lehet egyszerre
-
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER,ver.getindsize(),ver.getindices(),GL_STATIC_DRAW);///átmásol elküld
-
-        //pointerezés
-        glVertexAttribPointer(0,3,GL_FLOAT,GL_FALSE,3*sizeof(float),(void*)0);/// megmondja honnan olvassa
-
-        glEnableVertexAttribArray(0);
-
-        glBindBuffer(GL_ARRAY_BUFFER,0);
-
-        glBindVertexArray(0);
-
-    }
-
-*/
+        glm::mat4 trans = glm::mat4(1.0f);
+        trans = glm::translate(trans,glm::vec3(x,y,0.0));
+        trans = glm::rotate(trans,rotation,glm::vec3(0,0,1));
+        trans = glm::scale(trans,glm::vec3(width,hight,0.0));
+        mypen->Draw(trans,glm::vec3(1,1,1));
+    }*/
 
 
 };
+
+
+
+
+
 
 #endif // DRAWABLE_H_INCLUDED

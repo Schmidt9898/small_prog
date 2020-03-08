@@ -16,7 +16,7 @@ public:
     size_t getind_db(){return indices.size();}
     float* getvertices(){return vertices.data();}
     unsigned int* getindices(){return indices.data();}
-    ~VerticeObject() {std::cout<<"VerticieObject delete.";}
+    ~VerticeObject() {std::cout<<"VerticieObject delete.\n";}
 
     bool LoadVerticies(std::string filenamever, std::string filenameind)
     {

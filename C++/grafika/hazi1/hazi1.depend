@@ -1717,18 +1717,8 @@
 	<inttypes.h>
 	<stdint.h>
 
-1583327777 source:d:\programozas\small_prog\c++\grafika\hazi1\main.cpp
-	<glad/glad.h>
-	<GLFW/glfw3.h>
-	<math.h>
-	<iostream>
-	"shader.h"
-	"Vertices.h"
-	<thread>
-	"Drawable.h"
-	<glm/glm.hpp>
-	<glm/gtc/matrix_transform.hpp>
-	<glm/gtc/type_ptr.hpp>
+1583677658 source:d:\programozas\small_prog\c++\grafika\hazi1\main.cpp
+	"game.h"
 
 1579479197 d:\programozas\small_prog\c++\grafika\hazi1\include\glfw\glfw3.h
 	<stddef.h>
@@ -2404,7 +2394,7 @@
 
 1578255577 d:\programozas\small_prog\c++\grafika\hazi1\include\glm\simd\integer.h
 
-1583327279 d:\programozas\small_prog\c++\grafika\hazi1\vertices.h
+1583333214 d:\programozas\small_prog\c++\grafika\hazi1\vertices.h
 	<vector>
 
 1578255577 d:\programozas\small_prog\c++\grafika\hazi1\include\glm\gtc\matrix_transform.hpp
@@ -2654,12 +2644,33 @@
 1578255577 d:\programozas\small_prog\c++\grafika\hazi1\include\glm\gtc\type_ptr.inl
 	<cstring>
 
-1583319403 d:\programozas\small_prog\c++\grafika\hazi1\drawable.h
+1583679499 d:\programozas\small_prog\c++\grafika\hazi1\drawable.h
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<glm/gtc/type_ptr.hpp>
+	"Pen.h"
+
+1583519489 d:\programozas\small_prog\c++\grafika\hazi1\global_vaos.h
+	<string>
 	"Vertices.h"
 	"shader.h"
-	"global_VAOS.h"
-	<string>
 
-1583326304 d:\programozas\small_prog\c++\grafika\hazi1\global_vaos.h
+1583673012 d:\programozas\small_prog\c++\grafika\hazi1\pen.h
 	<string>
+	"shader.h"
+	"Vertices.h"
+
+1583679483 d:\programozas\small_prog\c++\grafika\hazi1\game.h
+	<glad/glad.h>
+	<GLFW/glfw3.h>
+	<math.h>
+	<iostream>
+	<thread>
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<glm/gtc/type_ptr.hpp>
+	"Drawable.h"
+
+1583679366 source:d:\programozas\small_prog\c++\grafika\hazi1\game.cpp
+	"game.h"
 
