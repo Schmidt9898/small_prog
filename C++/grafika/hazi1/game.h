@@ -13,7 +13,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include "Drawable.h"
-
+#include <time.h>
 
 
 
@@ -22,6 +22,7 @@ class Game{
 
 const unsigned int SCR_WIDTH = 600;
 const unsigned int SCR_HEIGHT = 600;
+//float screenscale=1;
 
 GLFWwindow* window;
 
@@ -36,6 +37,10 @@ Pen* rect;
 
 //entities
 Rectangle* player;
+int pont=0;
+vector<Ghost*> Enemies;
+vector<Rectangle*> Walls;
+vector<Rectangle*> Food;
 
 
 void PEN_Init()
