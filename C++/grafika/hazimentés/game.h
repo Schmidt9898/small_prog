@@ -6,7 +6,7 @@
 #include <math.h>
 #include <iostream>
 #include <thread>
-#include  <mutex>
+
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -20,7 +20,8 @@
 
 class Game{
 
-
+const unsigned int SCR_WIDTH = 600;
+const unsigned int SCR_HEIGHT = 600;
 //float screenscale=1;
 
 GLFWwindow* window;
@@ -28,7 +29,6 @@ GLFWwindow* window;
 //Pens
 Pen* tri;
 Pen* rect;
-Pen* playerpen;
 
 //float r = 0, g = 0, b = 0;
 
@@ -36,23 +36,17 @@ Pen* playerpen;
 //float x=0,y=0;
 
 //entities
-Rectangle* player=nullptr;
-Rectangle* exit=nullptr;
+Rectangle* player;
 int pont=0;
 vector<Ghost*> Enemies;
 vector<Rectangle*> Walls;
 vector<Rectangle*> Food;
-//vector<Drawable*>
-///scripting
-std::thread *script=nullptr;
-std::mutex monitor;
 
 
 void PEN_Init()
 {
 tri = new Pen("triangle","files/triangle.vs","files/triangle.fs","files/triangle.txt","none");
 rect = new Pen("rectangle","files/rectangle.vs","files/rectangle.fs","files/rectangle.txt","files/rectangle.ind");
-playerpen = new Pen("player","files/player.vs","files/player.fs","files/player.txt","files/player.ind");
 }
 
 
@@ -63,31 +57,20 @@ static void mouse_button_callback(GLFWwindow* window, int button, int action, in
 ///TODO resize callback
 //sceens
 
-int menusceen();//1
-int playsceen();//2
-int editorsceen();//3
-int load1();
+int menusceen();
+int playsceen();
 
 //delta
 void CalculateDelta();
 //player movement
 void CalculatePlayerMove();
-//
-
-
-
-
-void scriptfv();
 
 public:
 Game();//init
 void loop();//loop
-int gameid=0;
-int levelid=1;
 
 
-const unsigned int SCR_WIDTH = 600;
-const unsigned int SCR_HEIGHT = 600;
+
 
 
 
