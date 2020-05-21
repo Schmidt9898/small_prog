@@ -1717,7 +1717,7 @@
 	<inttypes.h>
 	<stdint.h>
 
-1583771150 source:d:\programozas\small_prog\c++\grafika\grafikagyak5\main.cpp
+1583772513 source:d:\programozas\small_prog\c++\grafika\grafikagyak5\main.cpp
 	<glad/glad.h>
 	<GLFW/glfw3.h>
 	<math.h>

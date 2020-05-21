@@ -118,7 +118,7 @@ Mode Switch_loop()
   {
     
   
-  leds[i] = CRGB(100,100,255); 
+  leds[i] = CRGB(100,100,255,0); 
   }
   FastLED.show();
   

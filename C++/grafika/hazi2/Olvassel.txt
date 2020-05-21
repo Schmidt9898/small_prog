@@ -1,0 +1,21 @@
+Menu
+esc gomb kilép
+Sárga tégla a játék
+Piros a vonal rajzoló ami az órai házihoz kell
+
+A Sárga/játék ban bal egérgommbal kell pontokat felvenni és az F gombal lehet finomítani 
+a program magátol nem finomít.
+esc menube visz.
+az enter elkezdi a játékot
+ezután az egérgomb lő az egér mutató irányába
+A és D gombal lehet jobra balra menni és a space el ugrani
+
+A Piros/rajzolóban a bal egérgombal lehet új pontot felvenni.
+A Q gomb lagrange vonalat rajzol az E gomb bezier görbét.
+A C töröl mindent.
+Az F Catmull Clark.
+esc menübe visz.
+
+
+ÉS IGEN ez a legközelebbi amit blenderben tudtam csinálni és giliszta formályú, ehhez még nem értek de már több idő nincs.
+ 

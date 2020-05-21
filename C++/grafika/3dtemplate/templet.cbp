@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="grafikagyak1" />
+		<Option title="templet" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/grafikagyak1" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/start" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/grafikagyak1" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/run" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -40,10 +40,23 @@
 			<Add library="C:/Program Files (x86)/CodeBlocks/MinGW/lib/libopengl32.a" />
 			<Add directory="lib-mingw" />
 		</Linker>
+		<Unit filename="Camera.h" />
+		<Unit filename="Drawable.cpp" />
+		<Unit filename="Drawable.h" />
+		<Unit filename="Game.cpp" />
+		<Unit filename="Game.h" />
+		<Unit filename="Pen.cpp" />
+		<Unit filename="Pen.h" />
+		<Unit filename="Vertices.h" />
+		<Unit filename="Verticies.cpp" />
 		<Unit filename="glad.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="inputmanagger.cpp" />
+		<Unit filename="inputmanagger.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="shader.h" />
+		<Unit filename="stb_image.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
