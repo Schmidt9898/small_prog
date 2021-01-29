@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1606497631 source:c:\users\schmidtlacus\desktop\Új mappa\calculatingpi\main.cpp
+	<iostream>
+	<cmath>
+
+1606499386 source:d:\programozas\small_prog\c++\calculatingthings\calculatingpi\main.cpp
+	<iostream>
+	<cmath>
+	<stdlib.h>
+	<time.h>
+

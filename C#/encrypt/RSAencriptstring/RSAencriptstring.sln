@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSAencriptstring", "RSAencriptstring.csproj", "{DAC35E17-CA0A-469B-B156-66B48C21C38C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2byte", "..\2byte\2byte.csproj", "{17E2ACD9-F195-44F8-82F7-E161C9F3E527}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAC35E17-CA0A-469B-B156-66B48C21C38C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAC35E17-CA0A-469B-B156-66B48C21C38C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAC35E17-CA0A-469B-B156-66B48C21C38C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAC35E17-CA0A-469B-B156-66B48C21C38C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17E2ACD9-F195-44F8-82F7-E161C9F3E527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17E2ACD9-F195-44F8-82F7-E161C9F3E527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17E2ACD9-F195-44F8-82F7-E161C9F3E527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17E2ACD9-F195-44F8-82F7-E161C9F3E527}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3995D268-F1AD-4510-8D81-457A1939E706}
+	EndGlobalSection
+EndGlobal

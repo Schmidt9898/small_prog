@@ -30,6 +30,9 @@ Material::Material(std::string path)
     }
     stbi_image_free(data);
 
+
+
+
 }
 
 void Material::Use()

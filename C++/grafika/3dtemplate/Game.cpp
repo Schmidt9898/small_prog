@@ -178,15 +178,15 @@ cross->myMaterial=mat_stone;
         glm::vec3 point = MainCamera->Front;
         point+=MainCamera->Position;
 
-       /* for(size_t i=0;i<boxes.size();i++)
+        for(size_t i=0;i<boxes.size();i++)
         {
-            if(boxes[i]->Contain_point(point)
+            if(boxes[i]->Contain_point(point))
                {
-                   boxes[i]=boxes[boxis.size()-1];
+                   boxes[i]=boxes[boxes.size()-1];
                    boxes.pop_back();
                }
 
-        }*/
+        }
     };
 
 

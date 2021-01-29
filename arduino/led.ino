@@ -2,14 +2,18 @@
     #include <IRremote.h>
     #include "Mode_t.h"
     #define NUM_LEDS 49
-    #define DATA_PIN 4
+    #define DATA_PIN 13
     
+
+int RECV_PIN = 2;
+IRrecv irrecv(RECV_PIN);
+decode_results results;
 
 CRGB leds[NUM_LEDS];
 Color color;
 
 void setup() {
-
+  irrecv.enableIRIn();
  FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
 //Serial.begin(9600);
 
@@ -114,12 +118,35 @@ Mode Switch_loop()
   {
     
   
-  //leds[i] = CRGB(100,100,255,0); 
+  leds[i] = CRGB(100,100,255,0); 
   }
   FastLED.show();
   
   
- 
+  while(true)
+  {
+
+  if (irrecv.decode(&results) and results.decode_type!=-1) 
+  {
+   // Serial.println(results.decode_type);
+    
+     
+    
+    switch(results.value)
+    {
+      case btn_flash:
+      //Serial.println("shifter case");
+      irrecv.resume();
+      return shifter_mode;
+      break;
+
+
+      
+    }
+    }
+  delay(10);
+    
+  }
   
 
   
