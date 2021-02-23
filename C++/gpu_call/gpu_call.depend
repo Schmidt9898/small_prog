@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1613431212 source:d:\programozas\small_prog\c++\gpu_call\main.cpp
+	<iostream>
+	"myheader.h"
+
+1613248628 d:\programozas\small_prog\c++\gpu_call\header.h
+	<iostream>
+
+1613295545 d:\programozas\small_prog\c++\gpu_call\mathlibrary.h
+
+1613430933 d:\programozas\small_prog\c++\gpu_call\myheader.h
+

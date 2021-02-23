@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1612697619 source:c:\users\flugi\cb\grafkit64\main.cpp
+	"graphics.hpp"
+
+1612611542 c:\users\flugi\cb\grafkit64\include\graphics.hpp
+	<string>
+
+1612698440 source:c:\users\flugi\cb\graphicskit64\main.cpp
+	"graphics.hpp"
+
+1612611542 c:\users\flugi\cb\graphicskit64\include\graphics.hpp
+	<string>
+
+1614100067 source:d:\programozas\small_prog\c++\make_things_paralel\mander\main.cpp
+	"graphics.hpp"
+	<cstdlib>
+	<iostream>
+	<fstream>
+	<vector>
+	<cmath>
+	"mandelrajz.hpp"
+	"komplex.hpp"
+
+1612611542 d:\programozas\small_prog\c++\make_things_paralel\mander\include\graphics.hpp
+	<string>
+
+1614099995 d:\programozas\small_prog\c++\make_things_paralel\mander\mandelrajz.hpp
+
+1490955625 d:\programozas\small_prog\c++\make_things_paralel\mander\komplex.hpp
+
+1490955615 source:d:\programozas\small_prog\c++\make_things_paralel\mander\komplex.cpp
+	"komplex.hpp"
+
+1614100441 source:d:\programozas\small_prog\c++\make_things_paralel\mander\mandelrajz.cpp
+	"komplex.hpp"
+	"graphics.hpp"
+	<iostream>
+	<omp.h>
+	<sstream>
+	<chrono>
+	<thread>
+

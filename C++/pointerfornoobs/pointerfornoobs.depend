@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1612442547 source:d:\programozas\small_prog\c++\pointerfornoobs\main.cpp
+	<iostream>
+	<iostream>
+	<iostream>
+	<iostream>
+	<vector>
+	<assert.h>
+

@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1614093367 source:d:\programozas\small_prog\c++\paralel\main.cpp
+	<iostream>
+	<omp.h>
+	"ParallelFUN.h"
+	<chrono>
+	<thread>
+	"mandelbrot_fun.h"
+
+1614084188 d:\programozas\small_prog\c++\paralel\include\parallelfun.h
+	<iostream>
+	<omp.h>
+
+1614014370 source:d:\programozas\small_prog\c++\paralel\src\parallelfun.cpp
+
+1614094216 d:\programozas\small_prog\c++\paralel\mandelbrot_fun.h
+	<string>
+	<sstream>
+

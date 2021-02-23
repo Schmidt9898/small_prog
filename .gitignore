@@ -391,3 +391,13 @@ C++/grafika/libs/
 
 C++/grafika/*/lib-mingw/
 pyton/venv/
+*.dll
+*.a
+C++/*/SDL/
+C++/make_things_paralel/mander/include/SDL/
+C++/make_things_paralel/mander/include/SDL2/
+*.sln
+*.lib
+*.la
+*.filters
+*.vcxproj
