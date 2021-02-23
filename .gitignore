@@ -385,6 +385,7 @@ C#/prog_lecke/graf/SDL2-CS/
 C#/prog_lecke/terkep/
 ai/
 */glad/glad.h
+*glad.c
 
 C++/grafika/*/include/
 C++/grafika/libs/
