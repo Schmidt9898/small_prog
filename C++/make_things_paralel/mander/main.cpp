@@ -13,18 +13,20 @@ const int XX=600;
 const int YY=500;
 
 
-const int MAX = 500;
+const int MAX = 1000;
 
 int main()
 {
 
-    float x=0,y=0;
+    double x=0,y=0;
     double step=0.1;
     double mag=4;
     gout.open(XX,YY);
     //mandelrajz(XX,YY, MAX,x,y);
     //gout << refresh;
     event ev;
+    mandelrajz(XX,YY, MAX,x,y,mag);
+        gout << refresh;
     while(gin >> ev ) {
     if(ev.type == ev_mouse)
                 continue;

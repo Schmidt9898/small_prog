@@ -38,6 +38,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add option="-fopenmp" />
 			<Add directory="include" />
 		</Compiler>
 		<Linker>
@@ -49,6 +50,7 @@
 			<Add library="gdi32" />
 			<Add library="winmm" />
 			<Add library="dxguid" />
+			<Add library="C:/Program Files/CodeBlocks/MinGW/bin/libgomp-1.dll" />
 			<Add directory="lib" />
 		</Linker>
 		<Unit filename="komplex.cpp" />

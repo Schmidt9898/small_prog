@@ -402,3 +402,7 @@ C++/make_things_paralel/mander/include/SDL2/
 *.la
 *.filters
 *.vcxproj
+*AssemblyInfo.cs
+*.depend
+*.class
+*.pdf

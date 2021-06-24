@@ -31,6 +31,7 @@ struct comp
     }
 
 };
+/*
 template <typename T>
 comp<T> operator+ (comp<T>& a,comp<T>& b)
 {
@@ -38,7 +39,7 @@ comp<T> operator+ (comp<T>& a,comp<T>& b)
     c.i=a.i+b.i;
     c.r=a.r+b.r;
     return a;
-}
+}*/
 template <typename T>
 comp<T> operator+ (comp<T> a,comp<T> b)
 {
@@ -46,6 +47,7 @@ comp<T> operator+ (comp<T> a,comp<T> b)
     a.r+=b.r;
     return a;
 }
+/*
 template <typename T>
 comp<T>  operator* (comp<T>& a,comp<T>& b)
 {
@@ -53,8 +55,15 @@ comp<T>  operator* (comp<T>& a,comp<T>& b)
     c.i=a.r*b.i+a.i*b.r;
     c.r=a.i*b.i*-1+(a.r*b.r);
     return c;
+}*/
+template <typename T>
+comp<T>  operator* (comp<T> a,comp<T> b)
+{
+    comp<T> c;
+    c.i=a.r*b.i+a.i*b.r;
+    c.r=a.i*b.i*-1+(a.r*b.r);
+    return c;
 }
-
 
 void mandelbrot_print(uint32_t* outbuff,const uint32_t XX, const uint32_t YY, uint32_t MAX)
 {
@@ -99,25 +108,26 @@ uint32_t* mandelbrot_cpu(const uint32_t XX, const uint32_t YY, uint32_t MAX,floa
 }
 
 
-uint32_t* mandelbrot_cpu_parallel(const uint32_t XX, const uint32_t YY, uint32_t MAX,float x_, float y_,float mag)
+uint32_t* mandelbrot_cpu_parallel(const uint32_t XX, const uint32_t YY, uint32_t MAX,double x_, double y_,double mag)
 {
     uint32_t* outbuff = new uint32_t[XX*YY];
 
-    #pragma omp parallel for schedule (dynamic ,1)
+    #pragma omp parallel for schedule (dynamic)
     for (uint32_t x=0; x<XX; x++)
     {
 
         for (uint32_t y=0; y<YY; y++)
         {
-            comp<float> c;
-            c.r = (mag/float(XX))*x - 2 +x_;//ide adj hozzá ha el kell mozogni
-            c.i = (mag/float(YY))*y - 2 +y_;
-            comp<float> z(0,0);
+            comp<double> c;
+            c.r = (mag/double(XX))*x - 2 +x_;//ide adj hozzá ha el kell mozogni
+            c.i = (mag/double(YY))*y - 2 +y_;
+            comp<double> z(0,0);
+            comp<double> one(0,0);
             uint32_t t = 0;//konvergencia
             while (z.r*z.r+z.i*z.i < 4.0 && t < MAX)
             {
                 //std::cout<<z.r*z.r+z.i*z.i;
-                z = z*z+c;
+                z = (z*z*z*z*z)+c;
                 t++;
             }
             outbuff[x*YY+y]=t;
@@ -130,7 +140,7 @@ uint32_t* mandelbrot_cpu_parallel(const uint32_t XX, const uint32_t YY, uint32_t
     std::chrono::time_point<std::chrono::high_resolution_clock> start,end;
     std::chrono::duration<float> duration;
 
-void mandelrajz(int XX, int YY, int MAX,float x_, float y_,float mag)
+void mandelrajz(int XX, int YY, int MAX,double x_, double y_,double mag)
 {
 
     uint32_t* outbuff;

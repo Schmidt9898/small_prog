@@ -6,7 +6,11 @@ using namespace std;
 
 
 
-
+class A
+{
+public:
+    virtual void f()=0;
+};
 
 
 
@@ -33,7 +37,9 @@ int main()
 
     [=]{};
 
-
+    int x=5;
+    int y=x++;
+    Print((1.0+2.0)/2.0);
 
     Afunction();
 

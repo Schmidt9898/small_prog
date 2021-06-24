@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1612635150 source:d:\programozas\small_prog\c++\funwithtemplate\main.cpp
+1612635777 source:d:\programozas\small_prog\c++\funwithtemplate\main.cpp
 	<iostream>
 	"FUNTemplete.h"
 	"FUNFunctions.h"
 
-1612635159 d:\programozas\small_prog\c++\funwithtemplate\funtemplete.h
+1612635289 d:\programozas\small_prog\c++\funwithtemplate\funtemplete.h
 	<iostream>
 	<stdarg.h>
 	<sstream>
