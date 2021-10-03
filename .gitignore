@@ -408,3 +408,11 @@ C++/make_things_paralel/mander/include/SDL2/
 *.pdf
 C++/SDL_VC/SDL2/*
 webapplications/myfirstwebapplication/*
+**/SDL2/**
+
+*.jpg
+*.lnk
+*.wav
+*.mp3
+C++/grafika/hazi1/Bubi_Sounds/mixer/lib/*
+C++/grafika/hazi1/sdl/*
