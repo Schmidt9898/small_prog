@@ -406,3 +406,5 @@ C++/make_things_paralel/mander/include/SDL2/
 *.depend
 *.class
 *.pdf
+C++/SDL_VC/SDL2/*
+webapplications/myfirstwebapplication/*

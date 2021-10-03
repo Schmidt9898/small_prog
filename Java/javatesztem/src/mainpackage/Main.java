@@ -16,6 +16,24 @@ public class Main {
 
                 String input = reader.readLine();
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         /*
                 String[] strings = input.split(" ");
                 double[] numbers = new double[strings.length];
                 double sum=0,avg=0;
@@ -41,7 +59,7 @@ public class Main {
 
         System.out.println("összeg: "+sum);
         System.out.println("átlag: "+avg);
-        System.out.println("Van köztük egysorma?: "+_2azonos);
+        System.out.println("Van köztük egysorma?: "+_2azonos);*/
 
     }
 }
