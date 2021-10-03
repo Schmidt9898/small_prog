@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1482183825 source:c:\dokumentumok\programok\c++\beugro\main.cpp
-	<iostream>
-	<cstdlib>
-	<ctime>
-	<cmath>
-	<vector>
-	<fstream>
-

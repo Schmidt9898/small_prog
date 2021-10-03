@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1481820178 source:c:\dokumentumok\programok\c++\repter\main.cpp
-	<iostream>
-	<fstream>
-	<cstdlib>
-	<vector>
-	<algorithm>
-	<string>
-

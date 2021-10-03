@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1477057924 source:c:\dokumentumok\programok\c++\talaldki\main.cpp
-	<iostream>
-	<cstdlib>
-	<ctime>
-

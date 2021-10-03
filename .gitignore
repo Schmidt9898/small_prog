@@ -419,3 +419,4 @@ C++/c++_Adatszerk/**/Debug/**
 C++/c++_Adatszerk/**/language.settings.xml
 *.prefs
 C++/c++_Adatszerk/**/.project
+*.exe
