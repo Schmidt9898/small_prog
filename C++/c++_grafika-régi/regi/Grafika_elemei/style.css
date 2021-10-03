@@ -1,0 +1,151 @@
+body {
+  background-image: url("frac.png");
+  background-attachment: fixed;
+  text-align: justify;
+}
+
+div#main {
+  background-color: #eef;
+  border: solid 2px #006;
+  width: 65%;
+  margin: 3em auto;
+  font-family: sans-serif;
+  padding: 1em 1.5em 1.5em;
+}
+
+img#photo {
+  float: right;
+  width: 25%;
+  margin: 0.5em;
+}
+
+h1 {
+  font-variant: small-caps;
+  text-align: center;
+  margin: 0 0 0.5em;
+  border-bottom: solid 1px #006;
+}
+
+h2 {
+  font-family: serif;
+  margin: 0.5em 0 0.5em;
+  font-size: 125%;
+}
+
+h3 {
+  font-size: 110%;
+  font-family: serif;
+  margin: 1em 1em 0.5em;
+  font-style: italic;
+}
+
+h1, h2, h3 {
+  color: #006;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #038;
+}
+
+a:hover {
+  /*text-decoration: underline;*/
+  background-color: #ff8;
+}
+
+a.img {
+  color: #eef;
+  background-color: #eef;
+}
+
+a.img:hover {
+  color: #006;
+}
+
+p {
+  margin: 0 1.5em 0.5em;
+}
+
+ul {
+  padding-left: 1em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+ol {
+  margin-left: 1em;
+  margin-right: 1.5em;
+}
+
+ul li {
+  list-style-image: url("item.gif");
+  margin-bottom: 0.5ex;
+}
+
+ol li {
+  margin-bottom: 1ex;
+}
+
+li p {
+  margin-left: 0;
+}
+
+img.inline {
+  vertical-align: middle;
+}
+
+div.note {
+  background-color: #ccf;
+  margin: 1ex;
+  padding: 0.5ex;
+}
+
+pre {
+  margin: 0 2.5em 0.5em;
+}
+hr {
+  border: solid #006 1px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 2ex auto;
+}
+
+table p {
+  margin: 0;
+}
+
+table ul {
+  margin: 0.5em;
+}
+
+table.list {
+  margin: 0 1em;
+}
+
+table.list td {
+  padding: 0 1ex;
+}
+
+table.list th {
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+  padding: 0.5ex;
+}
+
+table.lect td {
+  /*padding: 1ex 2em;*/
+  border: solid black 1pt;
+}
+table.lect p {
+  margin: 0.5ex 1em;
+}
+table.lect p.long {
+  text-align: center;
+}
+table.lect th { 
+  padding: 0.5ex;
+  border: solid black 1pt;
+}

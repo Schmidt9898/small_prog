@@ -1,0 +1,7 @@
+A játék lényege, hogy a hajó semlegesítsen minél több ellenfelet és 250 pontot összeszedjen, ekkor jön a Boss.
+A játék szintenként nehezedik, minden szint másik szín.
+Vannak powerapp-ek melyek valamilyen bónuszt adnak.
++élet
+célzó
+folyamatos lövés 3 másodpercig
+ezek felülírják egymást, erre figyelni kell.

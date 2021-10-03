@@ -361,7 +361,7 @@ MigrationBackup/
 
 
 *.layout
-C++/c++_grafika-régi/
+
 C++/libs/
 *.metadata/
 *.recommenders/
@@ -420,3 +420,14 @@ C++/c++_Adatszerk/**/language.settings.xml
 *.prefs
 C++/c++_Adatszerk/**/.project
 *.exe
+C++/c++_grafika-régi/**/SDL/**
+*.ttf
+*.kep
+*.rar
+C++/c++_grafika-régi/**/graphics.hpp
+C++/c++_grafika-régi/**/kamera.hpp
+C++/c++_grafika-régi/**/env.hpp
+*.bmp
+*.png
+C++/c++_grafika-régi/regi/1/kep.txt
+C++/c++_grafika-régi/regi/Grafika.htm
