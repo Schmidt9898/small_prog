@@ -1,0 +1,6 @@
+1: méret értéket érdemes unsigned int-ként visszaadni, mivel negatív szám úgysem lehet, viszont elõjel nélkül kétszer akkora számot is tudunk kezelni mint elõjellel.
+
+hiba:
+1: nem futott le a unit teszt, mivel a size() elõjeles int-tel tér vissza, a tesztben szereplõ set pedig elõjel nélkülivel. Mivel be van kapcsolva a Werror a fordítóban, ezért a sign/unsign összehasonlítás miatt keletkezõ warning miatt nem fordult.
+
+2: Nem fordult a kód, mert a skiplist.hpp 153.sorában volt egy signed/unsigned összehasonlítás, ami warningot dob, és Werror flaggel használjuk a fordítót.

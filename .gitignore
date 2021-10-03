@@ -358,9 +358,7 @@ MigrationBackup/
 *.md
 *.zip
 *.pdom
-C++/c++_Adatszerk/beadottak/hf03/RemoteSystemsTempFiles/.project
-C++/c++_Adatszerk/beadottak/hf04/.metadata/.lock
-C++/c++_Adatszerk/
+
 
 *.layout
 C++/c++_grafika-régi/
@@ -416,3 +414,8 @@ webapplications/myfirstwebapplication/*
 *.mp3
 C++/grafika/hazi1/Bubi_Sounds/mixer/lib/*
 C++/grafika/hazi1/sdl/*
+
+C++/c++_Adatszerk/**/Debug/**
+C++/c++_Adatszerk/**/language.settings.xml
+*.prefs
+C++/c++_Adatszerk/**/.project
