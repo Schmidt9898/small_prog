@@ -50,11 +50,11 @@ __global__ void cudamandelkernel(float* data, const int XX, const int YY,const i
                 float t = 0;
                 while (z.re() * z.re() + z.im() * z.im() < 4.0 && t < MAX) {
                     z = z * z + c;
-                    ++t;
+                    t+=1;
                 }
                 //gout << move_to(x, y) << color(t, t, t) << dot;
 
-                Ddim(data, x, y) = t/MAX * 256;
+                Ddim(data, x, y) = t/MAX*256;
         }
     
 

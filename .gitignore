@@ -431,3 +431,8 @@ C++/c++_grafika-régi/**/env.hpp
 *.png
 C++/c++_grafika-régi/regi/1/kep.txt
 C++/c++_grafika-régi/regi/Grafika.htm
+C++/Imgui_opengl/build/CMakeFiles/generate.stamp
+
+*/build*
+C++/Lib_resources/*
+C++/Imgui_opengl/build/*

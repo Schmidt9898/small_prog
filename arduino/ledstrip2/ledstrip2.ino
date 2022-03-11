@@ -1,7 +1,7 @@
     #include <FastLED.h>
     #include <IRremote.h>
     #include "Mode_t.h"
-    #define NUM_LEDS 49
+    #define NUM_LEDS 20
     #define DATA_PIN 4
     
 
@@ -11,7 +11,7 @@ Color color;
 void setup() {
 
  FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
-//Serial.begin(9600);
+Serial.begin(9600);
 
 
 for(int i=0;i<NUM_LEDS;i++)
@@ -68,6 +68,8 @@ void shifter_loop()
 //action loop
 while(true)
 {
+
+  Serial.println("loop");
   /*
 if (irrecv.decode(&results) and results.decode_type!=-1 and btn_off==results.value) {
   return;
@@ -85,7 +87,7 @@ if (irrecv.decode(&results) and results.decode_type!=-1 and btn_off==results.val
 
   }
   FastLED.show();
-  delay(10);
+ // delay(10);
 }
 
   

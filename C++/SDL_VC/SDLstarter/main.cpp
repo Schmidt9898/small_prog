@@ -169,7 +169,7 @@ int main(int argc, char *argv[])
 			//unsigned int color = rgb(t);
 			//char* colorp = (char*)&color;
 			//if (t < 256)
-			SDL_SetRenderDrawColor(renderer, 4*t,3*t,t*2, 255);
+			SDL_SetRenderDrawColor(renderer, t,2*t,t*3, 255);
 			//else
 			//SDL_SetRenderDrawColor(renderer, 0,0,0, 255);
 

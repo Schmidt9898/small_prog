@@ -111,7 +111,7 @@ int main()
             cout<<infolog<<endl;
 
         }
-        //nem kell ezért törlés
+        //nem kell, ezért törlés
         glDeleteShader(vertexShader);
         glDeleteShader(fragmentShader);
 
