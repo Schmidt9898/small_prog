@@ -68,8 +68,8 @@ float* mandelgpuinit(const int XX, const int YY)
 
 void mandelGPU(float* __restrict datavram,float* __restrict dataram, const int XX, const int YY,const int MAX, const double mag, const double xoff, const double yoff) {
 
-    dim3 threads(32,32,1);
-    dim3 blocks((XX - 1) / 32 + 1, (YY - 1) / 32 + 1, 1);
+    dim3 threads(32,16,1);
+    dim3 blocks((XX - 1) / 32 + 1, (YY - 1) / 16 + 1, 1);
     cudamandelkernel<<<blocks, threads >>> (datavram, XX,YY,MAX,mag,xoff,yoff);
     cudaMemcpy(dataram, datavram, XX*YY*sizeof(int), cudaMemcpyDeviceToHost);
 }

@@ -1,1 +1,0 @@
-print("lession 7")
